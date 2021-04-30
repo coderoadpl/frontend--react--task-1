@@ -19,7 +19,7 @@ const firstElement = React.createElement(
                     text
                 )
             })
-        ),
+        ), 
     ]
 )
 
@@ -44,3 +44,15 @@ containerDom.appendChild(firstElementDom)
 containerDom.appendChild(listElementDom)
 
 document.getElementById('root-dom').appendChild(containerDom)
+
+
+const divReact = React.createElement('div', { className: 'class-name' }, 'Children Text Node')
+const divDom = document.createElement('div')
+divDom.innerText = 'Children Text Node'
+divDom.className = 'class-name'
+
+console.dir(divDom)
+console.dir(divReact)
+
+ReactDOM.render(divReact, document.getElementById('test-react'))
+document.getElementById('test-dom').appendChild(divDom)
